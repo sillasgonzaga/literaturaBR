@@ -1,9 +1,10 @@
 Package: literaturaBR
-Title: What the Package Does (one line, title case)
-Version: 0.0.0.9000
-Authors@R: person("First", "Last", email = "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+Title: Texto integral de livros da literatura brasileira em dominio publico.
+Version: 0.0.1
+Authors@R: person("Sillas", "Gonzaga", email = "sillas.gonzaga@gmail.com", role = c("aut", "cre"))
+Description: Facilita o acesso de programadores R interessados em aplicar mineracao de texto em livros classicos da literatura brasileira.
 Depends: R (>= 3.4.2)
-License: What license is it under?
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+RoxygenNote: 6.0.1
