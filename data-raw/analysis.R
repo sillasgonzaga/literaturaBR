@@ -27,12 +27,12 @@ df <- bind_rows(
   escrava_isaura %>% mutate(author = "Bernardo Guimaraes")
 )
 
-dfm_literatura <- dfm(df$text, groups = df$book_name)
-summary(dfm_literatura)
+#dfm_literatura <- dfm(df$text, groups = df$book_name)
+#summary(dfm_literatura)
 
-dfm_literatura_sem_sw <- dfm(df$text, groups = df$book_name, remove =  quanteda::stopwords("portuguese"))
+#dfm_literatura_sem_sw <- dfm(df$text, groups = df$book_name, remove =  quanteda::stopwords("portuguese"))
 
-(df_lexical <- textstat_lexdiv(dfm_literatura))
+#(df_lexical <- textstat_lexdiv(dfm_literatura))
 
 # construir corpus
 df.corpus <- df %>%
@@ -50,14 +50,14 @@ corpus_dfm <- dfm(meu_corpus, remove_punct = TRUE,
 dfm_sort(corpus_dfm)[, 1:15]
 
 dfm_select(corpus_dfm, "deus")
-quanteda::kwic(meu_corpus, "paixão")
+quanteda::kwic(meu_corpus, "amor")
 
-topfeatures(corpus_dfm, groups = df.corpus$book_name)
+topfeatures(corpus_dfm, groups = df_corpus$book_name)
 
 corpus_simil <- textstat_simil(dfm_weight(corpus_dfm, "relfreq"), margin = "documents", upper = TRUE, diag = FALSE)
-lapply(as.list(simil), head)
+lapply(as.list(corpus_simil), head)
 
-corpus_dist <- textstat_simil(dfm_weight(corpus_dfm, "relfreq"), margin = "documents", upper = TRUE, diag = FALSE)
+corpus_dist <- textstat_dist(dfm_weight(corpus_dfm, "relfreq"), margin = "documents", upper = TRUE, diag = FALSE)
 plot(hclust(corpus_dist))
 
 
@@ -84,9 +84,10 @@ df.sentiment <- df.token %>%
 
 df.sentiment %>%
   ggplot(aes(x = chapter_number_norm, y = polarity)) +
-    geom_line() +
-    facet_wrap(~ book_name, ncol = 5)
-  #select(book_name, chapter_name, capitulo, polarity)
+  geom_line() +
+  facet_wrap(~ book_name, ncol = 5, labeller = label_wrap_gen(25)) +
+  labs(x = "Posição relativa no livro", y = "Sentimento") +
+  theme_minimal()
 
 df.sentiment %>%
   group_by(book_name) %>%
@@ -105,5 +106,5 @@ read <- textstat_readability(meu_corpus, measure = 'Flesch.Kincaid')
 # keyness
 key <- textstat_keyness(corpus_dfm, target = "O Alienista")
 # plots
-kwic(meu_corpus, "amor") %>% textplot_xray(scale = "relative")
+kwic(meu_corpus, "fogo") %>% textplot_xray(scale = "relative")
 

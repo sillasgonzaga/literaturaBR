@@ -3,7 +3,7 @@
 \docType{data}
 \name{memorias_de_um_sargento_de_milicias}
 \alias{memorias_de_um_sargento_de_milicias}
-\title{Memorias de um Sargento de Milicias - Manuel Antonio de Almeira}
+\title{Memorias de um Sargento de Milicias - Manuel Antonio de Almeida}
 \format{Um dataframe com 1451 linhas e 5 variaveis:
 \describe{
   \item{\code{book_name}}{character. Nome do livro.}
@@ -17,7 +17,7 @@ memorias_de_um_sargento_de_milicias
 }
 \description{
 Um dataset que contem o texto integral do livro Memorias de um Sargento de Milicias,
-de Manuel Antonio de Almeira,
+de Manuel Antonio de Almeida,
 publicado em 1853.
 }
 \keyword{datasets}

@@ -31,7 +31,7 @@
 #'   \item{\code{text}}{character. Texto do paragrafo.}
 #' }
 #'
-#' @source \url{https://pt.wikisource.org/wiki/O_Ateneu}}
+#' @source \url{https://pt.wikisource.org/wiki/O_Ateneu}
 "ateneu"
 
 
@@ -75,10 +75,10 @@
 
 
 
-#' Memorias de um Sargento de Milicias - Manuel Antonio de Almeira
+#' Memorias de um Sargento de Milicias - Manuel Antonio de Almeida
 #'
 #' Um dataset que contem o texto integral do livro Memorias de um Sargento de Milicias,
-#' de Manuel Antonio de Almeira,
+#' de Manuel Antonio de Almeida,
 #' publicado em 1853.
 #'
 #' @format Um dataframe com 1451 linhas e 5 variaveis:

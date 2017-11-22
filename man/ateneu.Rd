@@ -12,6 +12,9 @@
   \item{\code{paragraph_number}}{integer. Numero do paragrafo.}
   \item{\code{text}}{character. Texto do paragrafo.}
 }}
+\source{
+\url{https://pt.wikisource.org/wiki/O_Ateneu}
+}
 \usage{
 ateneu
 }
