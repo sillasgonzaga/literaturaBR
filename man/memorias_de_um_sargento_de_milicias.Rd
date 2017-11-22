@@ -11,6 +11,14 @@
   \item{\code{url}}{character. Link para capitulo no Wikisource.}
   \item{\code{paragraph_number}}{integer. Numero do paragrafo.}
   \item{\code{text}}{character. Texto do paragrafo.}
+}
+
+\describe{
+  \item{\code{book_name}}{character. Nome do livro.}
+  \item{\code{chapter_name}}{character. Capitulo.}
+  \item{\code{url}}{character. Link para capitulo no Wikisource.}
+  \item{\code{paragraph_number}}{integer. Numero do paragrafo.}
+  \item{\code{text}}{character. Texto do paragrafo.}
 }}
 \usage{
 memorias_de_um_sargento_de_milicias

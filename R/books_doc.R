@@ -90,7 +90,7 @@
 #'   \item{\code{text}}{character. Texto do paragrafo.}
 #' }
 #'
-#' @source \url{#' \describe{
+#' \describe{
 #'   \item{\code{book_name}}{character. Nome do livro.}
 #'   \item{\code{chapter_name}}{character. Capitulo.}
 #'   \item{\code{url}}{character. Link para capitulo no Wikisource.}
@@ -100,3 +100,24 @@
 #'
 #' @source \url{https://pt.wikisource.org/wiki/Mem%C3%B3rias_P%C3%B3stumas_de_Br%}
 "memorias_de_um_sargento_de_milicias"
+
+
+
+
+#' O Cortiço - Aluísio Azevedo
+#'
+#' Um dataset que contem o texto integral do livro O Cortiço,
+#' de Aluísio Azevedo,
+#' publicado em 1890.
+#'
+#' @format A data frame with 2232 rows and 5 variables:
+#' \describe{
+#'   \item{\code{book_name}}{character. Nome do livro.}
+#'   \item{\code{chapter_name}}{character. Capitulo.}
+#'   \item{\code{url}}{character. Link para capitulo no Wikisource.}
+#'   \item{\code{paragraph_number}}{integer. Numero do paragrafo.}
+#'   \item{\code{text}}{character. Texto do paragrafo.}
+#' }
+#'
+#' @source \url{https://pt.wikisource.org/wiki/O_Corti%C3%A7o}
+"cortico"

@@ -26,3 +26,7 @@ url <- "https://pt.wikisource.org/wiki/Mem%C3%B3rias_de_um_Sargento_de_Mil%C3%AD
 memorias_de_um_sargento_de_milicias <- extract_book(url, "B")
 use_data(memorias_de_um_sargento_de_milicias, overwrite = TRUE)
 
+# O Cortiço #
+url <- "https://pt.wikisource.org/wiki/O_Corti%C3%A7o"
+cortico <- extract_book(url, "B", xpath_chapters = '//*[@id="mw-content-text"]/div/div/div/div/div[1]/div/span/a')
+use_data(cortico, overwrite = TRUE)

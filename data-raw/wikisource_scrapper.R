@@ -12,15 +12,14 @@ library(stringr)
 library(rvest)
 
 
-extract_chapter_url <- function(wikisource_book_page){
+extract_chapter_url <- function(wikisource_book_page, xpath_chapters){
   # First function: scrape chapters urls of a given book url
   # url example: https://pt.wikisource.org/wiki/A_escrava_Isaura
 
   book_html <- wikisource_book_page %>% read_html()
 
   chapters <- book_html %>%
-    html_nodes(xpath = '//*[@id="mw-content-text"]/div/ul/li') %>%
-    html_nodes(css = "a")
+    html_nodes(xpath = xpath_chapters)
   # extract chapter names and urls
   chapter_names <- chapters %>% html_text()
   chapter_urls <- chapters %>% html_attr("href")
@@ -50,21 +49,22 @@ extract_chapter_url <- function(wikisource_book_page){
 }
 
 
-# ex <- "https://pt.wikisource.org/wiki/A_escrava_Isaura/I"
-# x <- extract_chapter_text(ex)
+
+
+# ex <- "https://pt.wikisource.org/wiki/O_Corti%C3%A7o" %>% read_html()
 #
-# xpath_main <- '//*[@id="mw-content-text"]/div/p'
-#
-# ex %>%
+# "https://pt.wikisource.org/wiki/O_Corti%C3%A7o" %>%
 #   read_html() %>%
-#   html_nodes(xpath = xpath_c) %>%
-#   #html_text() %>% cat()
-#   #html_nodes('p') %>%
-#   html_text()
+#   html_nodes(xpath = '//*[@id="mw-content-text"]/div/div/div/div/div[1]/div/span/a')
 #
-# a <- a[-1]
-#
-# x <- extract_chapter_text("https://pt.wikisource.org/wiki/Mem%C3%B3rias_P%C3%B3stumas_de_Br%C3%A1s_Cubas/CVIII")
+# "https://pt.wikisource.org/wiki/A_escrava_Isaura" %>%
+#   read_html() %>%
+#   html_nodes(xpath = '//*[@id="mw-content-text"]/div/ul/li')
+
+
+chp_ex <- "https://pt.wikisource.org/wiki/O_Corti%C3%A7o/I"
+
+extract_chapter_text(chp_ex, "B")
 
 extract_chapter_text <- function(wikisource_chapter_page, xpath_type){
 
@@ -122,8 +122,10 @@ extract_chapter_text <- function(wikisource_chapter_page, xpath_type){
 }
 
 ### function to extract text of a whole book
-extract_book <- function(wikisource_book_page, xpath_type){
-  df_chapters_urls <- extract_chapter_url(wikisource_book_page)
+extract_book <- function(wikisource_book_page,
+                         xpath_type,
+                         xpath_chapters = '//*[@id="mw-content-text"]/div/ul/li/a'){
+  df_chapters_urls <- extract_chapter_url(wikisource_book_page, xpath_chapters)
   # check if dataframe
   if(!inherits(df_chapters_urls, "data.frame")) {
     stop("Output of extract_url_chapters() not a dataframe")
