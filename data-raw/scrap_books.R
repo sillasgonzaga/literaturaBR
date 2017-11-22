@@ -30,3 +30,8 @@ use_data(memorias_de_um_sargento_de_milicias, overwrite = TRUE)
 url <- "https://pt.wikisource.org/wiki/O_Corti%C3%A7o"
 cortico <- extract_book(url, "B", xpath_chapters = '//*[@id="mw-content-text"]/div/div/div/div/div[1]/div/span/a')
 use_data(cortico, overwrite = TRUE)
+
+# Noite na Taverna #
+url <- "https://pt.wikisource.org/wiki/Noite_na_Taverna"
+noite_na_taverna <- extract_book(url, "B")
+use_data(noite_na_taverna, overwrite = TRUE)

@@ -17,6 +17,8 @@ Até o momento, estes livros estão disponíveis no pacote:
 * A Escrava Isaura, de Bernardo Guimarães;  
 * Memórias de um Sargento de Milícias, de Manuel Antonio de Almeida;  
 * Memórias Póstumas de Brás Cubas, de Machado de Assis;  
+* O Cortiço, de Aluísio Azevedo (Adicionado em 22/11/2017);  
+* Noite na Taverna, de Álvares de Azevedo (Adicionado em 22/11/2017);  
 
 Os livros providenciados pelo `literaturaBR` estão em domínio público e são extraídos do site Wikisource por meio de web scraping. O código escrito para extrair os livros e os converter em dataframe estão presentes na pasta `data-raw/`. 
 

@@ -62,9 +62,9 @@ extract_chapter_url <- function(wikisource_book_page, xpath_chapters){
 #   html_nodes(xpath = '//*[@id="mw-content-text"]/div/ul/li')
 
 
-chp_ex <- "https://pt.wikisource.org/wiki/O_Corti%C3%A7o/I"
+#chp_ex <- "https://pt.wikisource.org/wiki/O_Corti%C3%A7o/I"
 
-extract_chapter_text(chp_ex, "B")
+#extract_chapter_text(chp_ex, "B")
 
 extract_chapter_text <- function(wikisource_chapter_page, xpath_type){
 
