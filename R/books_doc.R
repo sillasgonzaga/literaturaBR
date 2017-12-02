@@ -141,3 +141,23 @@
 #'
 #' @source \url{https://pt.wikisource.org/wiki/Noite_na_Taverna}
 "noite_na_taverna"
+
+
+
+#' Dom Casmurro - Machado de Assis
+#'
+#' Título: Dom Casmurro
+#' Autor: Machado de Assis
+#' Ano: 1899
+#'
+#' @format A data frame with 612 rows and 5 variables:
+#' \describe{
+#'   \item{\code{book_name}}{character. Nome do livro.}
+#'   \item{\code{chapter_name}}{character. Capitulo.}
+#'   \item{\code{url}}{character. Link para capitulo no Wikisource.}
+#'   \item{\code{paragraph_number}}{integer. Numero do paragrafo.}
+#'   \item{\code{text}}{character. Texto do paragrafo.}
+#' }
+#'
+#' @source \url{https://pt.wikisource.org/wiki/Dom_Casmurro}
+"dom_casmurro"

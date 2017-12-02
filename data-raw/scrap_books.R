@@ -4,6 +4,7 @@ source("data-raw/wikisource_scrapper.R")
 # A escrava Isaura #
 url <- "https://pt.wikisource.org/wiki/A_escrava_Isaura"
 escrava_isaura <- extract_book(url, xpath_type = "A")
+escrava
 use_data(escrava_isaura, overwrite = TRUE)
 
 # O Ateneu
@@ -35,3 +36,8 @@ use_data(cortico, overwrite = TRUE)
 url <- "https://pt.wikisource.org/wiki/Noite_na_Taverna"
 noite_na_taverna <- extract_book(url, "B")
 use_data(noite_na_taverna, overwrite = TRUE)
+
+# Dom Casmurro #
+url <- "https://pt.wikisource.org/wiki/Dom_Casmurro"
+dom_casmurro <- extract_book(url, "A")
+use_data(dom_casmurro, overwrite = TRUE)
