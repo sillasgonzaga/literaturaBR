@@ -7,6 +7,7 @@
 #' @return Dataframe
 #' @examples
 #' # load_all_books()
+#' @export
 load_all_books <- function(){
   d <- data(package = "literaturaBR")
   all_datasets <- d$results[, "Item"]
