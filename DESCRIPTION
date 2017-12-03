@@ -1,6 +1,6 @@
 Package: literaturaBR
 Title: Texto integral de livros da literatura brasileira em dominio publico.
-Version: 0.0.2002
+Version: 0.0.3002
 Authors@R: person("Sillas", "Gonzaga", email = "sillas.gonzaga@gmail.com", role = c("aut", "cre"))
 Description: Facilita o acesso de programadores R interessados em aplicar mineracao de texto em livros classicos da literatura brasileira.
 Depends: R(>= 2.10.0)
